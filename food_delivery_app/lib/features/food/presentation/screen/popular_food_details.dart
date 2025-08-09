@@ -5,10 +5,8 @@ import 'package:food_delivery_app/core/utils/dimensions.dart';
 import 'package:food_delivery_app/widgets_common/app_icon.dart';
 import 'package:food_delivery_app/widgets_common/big_text.dart';
 import 'package:food_delivery_app/widgets_common/expandable_text_widget.dart';
-import 'package:food_delivery_app/widgets_common/food_full_details.dart';
 import 'package:food_delivery_app/widgets_common/food_short_detail.dart';
-import 'package:food_delivery_app/widgets_common/icon_with_text.dart';
-import 'package:food_delivery_app/widgets_common/small_text.dart';
+import 'package:get/get.dart';
 
 class PopularFoodDetails extends StatelessWidget {
   const PopularFoodDetails({super.key});
@@ -40,8 +38,11 @@ class PopularFoodDetails extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AppIcon(
-                      icon: Icons.arrow_back_ios_new,
+                  GestureDetector(
+                    onTap: (){Get.back();},
+                    child: AppIcon(
+                        icon: Icons.arrow_back_ios_new,
+                    ),
                   ),
                   AppIcon(
                       icon: Icons.shopping_cart_outlined,
